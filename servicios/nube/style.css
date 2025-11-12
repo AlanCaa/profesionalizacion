@@ -1,0 +1,178 @@
+/* Estilos para la página de Nube */
+.seccion-planes {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 60px 0;
+}
+
+.seccion-cotizacion {
+  padding: 60px 0;
+}
+
+.cotizacion-card {
+  background: white;
+}
+
+/* Cards de Planes */
+.plan-card {
+  background: white;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.plan-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 51, 102, 0.2) !important;
+}
+
+.plan-card.selected {
+  border: 3px solid #003366 !important;
+  box-shadow: 0 15px 35px rgba(0, 51, 102, 0.3) !important;
+}
+
+.plan-popular {
+  border: 2px solid #003366;
+  position: relative;
+}
+
+.plan-badge {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+  color: white;
+  padding: 5px 40px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.plan-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+  border-radius: 50%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.plan-icono svg {
+  fill: white !important;
+}
+
+.plan-precio {
+  padding: 15px 0;
+  border-top: 2px solid #f0f0f0;
+  border-bottom: 2px solid #f0f0f0;
+}
+
+.plan-capacidad .badge {
+  background-color: #003366 !important;
+  font-size: 1rem;
+}
+
+.plan-card-body ul li {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.plan-card-body ul li strong {
+  color: #003366;
+  margin-right: 8px;
+}
+
+/* Estilos para cotización */
+.duracion-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.duracion-option {
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.duracion-option:hover {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+}
+
+.duracion-option input[type="radio"]:checked + strong {
+  color: #003366;
+}
+
+input[type="radio"]:checked ~ * {
+  color: #003366;
+}
+
+.duracion-option:has(input[type="radio"]:checked) {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+  border-width: 2px !important;
+}
+
+.opciones-extra-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.extra-option {
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.extra-option:hover {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+}
+
+.extra-option:has(input[type="checkbox"]:checked) {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+  border-width: 2px !important;
+}
+
+.precio-total-card {
+  background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+  color: white;
+}
+
+.precio-total-card .precio-total {
+  color: white !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Animaciones */
+.plan-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.plan-card.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cotizacion-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.cotizacion-card.animated {
+  opacity: 1;
+  transform: translateY(0);
+}

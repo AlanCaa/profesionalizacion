@@ -1,0 +1,159 @@
+/* Estilos para la página de Mantenimiento */
+.seccion-servicios {
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  padding: 60px 0;
+}
+
+.seccion-solicitud {
+  padding: 60px 0;
+}
+
+.solicitud-card {
+  background: white;
+}
+
+/* Cards de Servicios */
+.servicio-card {
+  background: white;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.servicio-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 51, 102, 0.2) !important;
+}
+
+.servicio-popular {
+  border: 2px solid #003366;
+  position: relative;
+}
+
+.servicio-badge {
+  position: absolute;
+  top: 15px;
+  right: -30px;
+  background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+  color: white;
+  padding: 5px 40px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  transform: rotate(45deg);
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.servicio-icono {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #003366 0%, #0055aa 100%);
+  border-radius: 50%;
+  padding: 15px;
+  margin: 0 auto;
+}
+
+.servicio-icono svg {
+  fill: white !important;
+}
+
+.servicio-card-body ul li {
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.servicio-card-body ul li strong {
+  color: #003366;
+  margin-right: 8px;
+}
+
+/* Estilos para formulario */
+.tipo-servicio-card,
+.modalidad-card,
+.urgencia-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.tipo-option,
+.modalidad-option,
+.urgencia-option {
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.tipo-option:hover,
+.modalidad-option:hover,
+.urgencia-option:hover {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+}
+
+.tipo-option input[type="radio"]:checked + strong,
+.modalidad-option input[type="radio"]:checked ~ * strong,
+.urgencia-option input[type="radio"]:checked + strong {
+  color: #003366;
+}
+
+.tipo-option:has(input[type="radio"]:checked),
+.modalidad-option:has(input[type="radio"]:checked),
+.urgencia-option:has(input[type="radio"]:checked) {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+  border-width: 2px !important;
+}
+
+.opciones-extra-card {
+  background-color: #f8f9fa;
+  border: 1px solid #e9ecef;
+}
+
+.extra-option {
+  background: white;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.extra-option:hover {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+}
+
+.extra-option:has(input[type="checkbox"]:checked) {
+  background-color: #e8f1ff;
+  border-color: #003366 !important;
+  border-width: 2px !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* Animaciones */
+.servicio-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.servicio-card.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.solicitud-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.solicitud-card.animated {
+  opacity: 1;
+  transform: translateY(0);
+}
+
